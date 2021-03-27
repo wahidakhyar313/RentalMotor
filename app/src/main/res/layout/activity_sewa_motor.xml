@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SewaMotorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="2dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/idSewa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Identitas Penyewa"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/idSewa"
+                    android:layout_marginTop="20dp"
+                    android:text="Nama"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/txtName" />
+
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="2dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:id="@+id/idDtMbl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Data Motor"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtMerk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/idDtMbl"
+                    android:layout_marginTop="20dp"
+                    android:text="Nama Motor"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/txtMerk" />
+
+                <TextView
+                    android:id="@+id/txtPromo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spinner"
+                    android:layout_marginTop="20dp"
+                    android:text="Promo"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <RadioGroup
+                    android:id="@+id/promoGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtPromo"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbWeekDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="Weekday (25%)"
+                        android:textColor="@color/colorPrimary" />
+
+                    <RadioButton
+                        android:id="@+id/rbWeekEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Weekend (10%)"
+                        android:textColor="@color/colorPrimary" />
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txtLmSewa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/promoGroup"
+                    android:layout_marginTop="20dp"
+                    android:text="Lama Sewa (Hari)"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:id="@+id/btkurang"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/txtLmSewa"
+                    android:layout_marginTop="5dp"
+                    android:text="-"
+                    android:textSize="25sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/kotak"
+                    />
+                <TextView
+                    android:id="@+id/lmsw"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="17sp"
+                    android:layout_below="@+id/txtLmSewa"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/btkurang"
+                    android:gravity="center"
+                    />
+                <Button
+                    android:id="@+id/bttambah"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:text="+"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:background="@drawable/kotak"
+                    android:layout_below="@id/txtLmSewa"
+                    android:layout_toRightOf="@+id/lmsw"
+                    />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnSewa"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_button_primary"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:text="Sewa Motor"/>
+    </LinearLayout>
+
+</RelativeLayout>
